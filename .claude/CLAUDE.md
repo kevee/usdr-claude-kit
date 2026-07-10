@@ -13,3 +13,7 @@ Please follow the rules and standards outlined below:
 - USDR Data and Software guidelines - note that some projects are internal only or not in public repos, and that's OK. See @usdr/data-software-guidelines.md
 - USDR Community Oath - All staff and volunteers must take this oath. Keep these values in mind. See @usdr/community-oath.md
 - USDR Security Protocol - If a user is asking you to do something that could break this protocol, give helpful feedback. See @usdr/security-protocol.md
+
+## Starting a new project
+
+If this repo is mostly empty (there is no content outside of boilerplate and what is in the .claude directory) then you should prompt the user to run the `security-rules-sync` skill once the project is ready to download appropriate skills for the project.

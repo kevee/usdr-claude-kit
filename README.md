@@ -2,6 +2,10 @@
 
 A starter [Claude Code](https://claude.ai/code) configuration for U.S. Digital Response (USDR) staff and volunteers. It ships a `.claude/` setup that loads USDR's operating guidelines into every session, so the assistant works within our data, software, and security standards by default.
 
+**Please review USDR’s general guidelines for software & data, too: https://policies.usdigitalresponse.org/data-and-software-guidelines**
+
+[![Code of Conduct](https://img.shields.io/badge/%E2%9D%A4-code%20of%20conduct-blue.svg?style=flat)](./CODE_OF_CONDUCT.md)
+
 ## What's in here
 
 The heart of the kit is `.claude/CLAUDE.md`, which Claude Code reads at the start of every session in this repo. It imports three USDR policy docs so their full text is always in context:
