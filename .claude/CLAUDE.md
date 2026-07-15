@@ -24,6 +24,7 @@ Unless the user has chosen another language or platform, the default way you sho
 
 - Typescript language
 - Jest for testing
+- React for web UI if needed
 - Cypress for e2e testing (if required)
 - NextJS if a web UI is needed
 
