@@ -18,6 +18,15 @@ Please follow the rules and standards outlined below:
 
 If this repo is mostly empty (there is no content outside of boilerplate and what is in the .claude directory) then you should prompt the user to run the `security-rules-sync` skill once the project is ready to download appropriate skills for the project.
 
+### Default stack
+
+Unless the user has chosen another language or platform, the default way you should write apps are:
+
+- Typescript language
+- Jest for testing
+- Cypress for e2e testing (if required)
+- NextJS if a web UI is needed
+
 ### Set up launch command
 
 When starting a new project form scratch, set up a claude `launch` file so the user can preview changes within the desktop app.
