@@ -18,6 +18,8 @@ Please follow the rules and standards outlined below:
 
 If this repo is mostly empty (there is no content outside of boilerplate and what is in the .claude directory) then you should prompt the user to run the `security-rules-sync` skill once the project is ready to download appropriate skills for the project.
 
+Please write and update any notes about this project for yourself internally in @NOTES.md file.
+
 ### Default stack
 
 Unless the user has chosen another language or platform, the default way you should write apps are:
