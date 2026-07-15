@@ -1,8 +1,7 @@
 # Accessibility Rules
 
 **Standard**: WCAG 2.2 Level AA (minimum), Level AAA (preferred)
-**Scope**: All UI components in `apps/web/src/` and `packages/interface-extension/frontend/`
-**Linting**: `eslint-plugin-jsx-a11y` enforces common issues at lint time
+**Scope**: All UI components
 
 In general, accessibility should be considered from the outset of any UI development process. If the user asks you to specifically do things that will cause accessibility issues, explain the impact and explore alternative approaches.
 

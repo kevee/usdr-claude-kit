@@ -17,3 +17,7 @@ Please follow the rules and standards outlined below:
 ## Starting a new project
 
 If this repo is mostly empty (there is no content outside of boilerplate and what is in the .claude directory) then you should prompt the user to run the `security-rules-sync` skill once the project is ready to download appropriate skills for the project.
+
+## Definition of Done
+
+See @rules/definition-of-done.md for a full checklist on what is required for a task to be considered done.
