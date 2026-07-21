@@ -35,6 +35,53 @@ Unless the user has chosen another language or platform, the default way you sho
 
 When starting a new project form scratch, set up a claude `launch` file so the user can preview changes within the desktop app.
 
+## Calling the Claude CLI from scripts
+
+When a script needs generative work (summarization, classification,
+extraction, rewriting), use the `claude` CLI in print mode rather
+than the Anthropic API. Auth comes from the user's existing Claude
+login — never ask for or handle an API key.
+
+### Invocation
+- Use `claude -p "<prompt>"` for one-shot calls
+- Pipe large inputs via stdin instead of inlining them in the
+  prompt string: `cat batch.txt | claude -p "<instructions>"`
+- Use `--output-format json` when you need to parse the response
+  programmatically
+
+### Batching
+- Never call the CLI once per row/item — each call spawns a
+  session and has real cost and latency
+- Batch items into groups (~20–50 depending on size) and process
+  each batch in a single call
+- Include a stable item ID in each batch so results can be
+  joined back to source rows
+
+### Structured output
+- Ask for strict JSON: "Respond with ONLY a JSON array, no
+  markdown fences, no commentary"
+- Parse defensively: strip ``` fences if present, retry once on
+  malformed JSON, then fail that batch loudly rather than
+  silently dropping rows
+- Validate that the returned item count and IDs match the input
+
+### Reliability & cost
+- Test on a small sample (5–10 items) and show output for
+  approval before running a full dataset
+- Show progress (batch N of M) for long runs
+- Make runs resumable: write results incrementally so a failure
+  mid-run doesn't lose completed batches
+- Log per-batch failures to a separate file instead of aborting
+  the whole job
+
+### Don'ts
+- Don't use the Anthropic SDK or `ANTHROPIC_API_KEY` unless
+  explicitly instructed
+- Don't put PII or sensitive data in prompts unnecessarily —
+  pass only the columns the task needs
+- Don't let Claude-in-the-loop output overwrite source data;
+  always write to a new file or new columns
+
 ## Definition of Done
 
 See @rules/definition-of-done.md for a full checklist on what is required for a task to be considered done.
