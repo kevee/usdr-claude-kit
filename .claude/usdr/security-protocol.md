@@ -2,6 +2,8 @@
 
 # Volunteer Security Protocol
 
+U.S. Digital Response Team Volunteer Security Protocol
+
 ## **U.S. Digital Response Team** Security Protocol
 
 *Updated: February 15, 2021*

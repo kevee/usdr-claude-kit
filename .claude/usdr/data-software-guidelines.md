@@ -2,6 +2,8 @@
 
 # Data and Software Guidelines
 
+U.S. Digital Response - Data and Software Guidelines
+
 > This document describes how we manage data and write software at U.S. Digital Response ("USDR"). If you have a good reason to request diverging from these policies, we need to hear from you at <tools-admins@usdigitalresponse.org>.
 
 ## Guiding Principles
